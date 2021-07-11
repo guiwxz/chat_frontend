@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
 import apiUrls, { apiUrl } from '../helpers';
 
-import { MessagesPayload, UserPayload } from './api.d'
+import { MessagesPayload } from './api.d'
 
 const api = axios.create({
   baseURL: apiUrl,

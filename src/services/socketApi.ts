@@ -1,12 +1,6 @@
 import socketIOClient from 'socket.io-client';
 import { apiUrl } from '../helpers';
 
-type SocketSendMessage = {
-  cod_user: number, 
-  message: string,
-  nickname: string
-}
-
 const socket = socketIOClient(apiUrl);
 
 // on: listen to back socket emitions

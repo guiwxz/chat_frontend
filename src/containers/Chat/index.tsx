@@ -3,10 +3,9 @@ import { useHistory } from "react-router-dom";
 import { Form, Field } from "react-final-form";
 import { Grid, Typography, Button } from "@material-ui/core";
 
-import { ChatProps, UserProps } from "./index.d";
+import { UserProps } from "./index.d";
 
 import skt from "../../services/socketApi";
-import api from "../../services/api";
 
 import { handleConnection, handleGetMessages } from "./helper";
 
@@ -23,7 +22,7 @@ const Chat: React.FC = () => {
     handleGetMessages({ setData });
 
     skt.onSendBack(setData);
-  }, []);
+  }, [history]);
 
   const handleSubmit = (values: any) => {
     if(!localStorage.getItem('id') && !sessionStorage.getItem('id')){
