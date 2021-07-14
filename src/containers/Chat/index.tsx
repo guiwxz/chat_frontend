@@ -40,12 +40,12 @@ const Chat: React.FC = () => {
   };
 
   return (
-    <Grid container spacing={3}>
+    <Grid container spacing={3} style={{ marginLeft: '50px', height: '300px', margin: '5px', width: '500px' }}>
       <Grid item xs={12}>
-        <Grid container>
+        <Grid container style={{ overflow: 'scroll', height: '500px' }}>
           {data.map((it: any, index: number) => (
             <Grid item xs={12} key={index}>
-              <Typography variant="h6">
+              <Typography variant="body1">
                 <b>{it.nickname}</b>: {it.message}
               </Typography>
             </Grid>
@@ -60,8 +60,9 @@ const Chat: React.FC = () => {
             return (
               <form noValidate onSubmit={formProps.handleSubmit}>
                 <Grid container spacing={1}>
-                  <Grid item xs={12}>
+                  <Grid item xs={12} >
                     <Field
+                      style={{ height: '30px', padding: '4px', marginRight: '10px' }}
                       name="message"
                       component="input"
                       placeholder="Digite sua mensagem"
